@@ -44,8 +44,8 @@ const data = require("./data");
     { ...next },
     {
       script: `
-			document.querySelector("input[jsname='L9xHkb']").setAttribute('value', ${data.liveIn});
-			document.querySelector("div[jsname='wQNmvb']").setAttribute('data-value', ${data.liveIn});
+			document.querySelector("input[jsname='L9xHkb']").setAttribute('value', "${data.liveIn}");
+			document.querySelector("div[jsname='wQNmvb']").setAttribute('data-value', "${data.liveIn}");
 			`,
     },
     {
