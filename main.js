@@ -98,18 +98,6 @@ const createLectures = (lectures) => {
 
     queries.push(
       {
-        action: {
-          type: "timeout",
-          val: 500,
-        },
-      },
-      {
-        query: By.xpath(helpers.contain("Tambah Data", "button")),
-        action: {
-          type: "click",
-        },
-      },
-      {
         query: By.xpath(helpers.contain(lecture.type, "label")),
         action: {
           type: "click",
@@ -217,6 +205,18 @@ const createLectures = (lectures) => {
 
   if (data.lectures.length > 0) {
     commands.push(
+      {
+        action: {
+          type: "timeout",
+          val: 500,
+        },
+      },
+      {
+        query: By.xpath(helpers.contain("Tambah Data", "button")),
+        action: {
+          type: "click",
+        },
+      },
       ...createLectures(data.lectures),
       {
         query: By.xpath(helpers.contain("Keluar", "button")),
